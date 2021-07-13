@@ -7,16 +7,14 @@ import App from './App';
 import configureStore from './store';
 import { populateProduce } from './store/produce';
 
+
 const store = configureStore();
 
 
 if (process.env.NODE_ENV !== "production") {
   window.store = store;
   window.populateProduce = populateProduce;
-
 }
-
-
 
 function Root() {
   return (
