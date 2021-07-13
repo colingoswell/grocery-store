@@ -1,5 +1,5 @@
 import {AddToCart} from '../../store/cart'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import { useState,useEffect } from 'react';
 
 function ProduceDetails({ produce }) {
@@ -9,9 +9,12 @@ function ProduceDetails({ produce }) {
 
   const dispatch = useDispatch()
 
-  useEffect(()=>{
-    dispatch(AddToCart(produce.id))
-  },[dispatch])
+  // const prod = useSelector(state => state.produce.id)
+
+
+  // useEffect(()=>{
+  //   dispatch(AddToCart(prod))
+  // },[dispatch])
 
 
 
